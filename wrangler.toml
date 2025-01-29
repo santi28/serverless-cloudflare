@@ -1,0 +1,30 @@
+name = "serverless-cloudflare"
+main = "src/index.ts"
+compatibility_date = "2025-01-23"
+
+# compatibility_flags = [ "nodejs_compat" ]
+
+[vars]
+SUPABASE_URL = "https://czbdqgstoqjakyewszpk.supabase.co"
+SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImN6YmRxZ3N0b3FqYWt5ZXdzenBrIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTczNzkzMjg3OCwiZXhwIjoyMDUzNTA4ODc4fQ.ecX-QMRmXEZr2IQy2JKJ2ajra-YKXLR9OaOByfo1JqM"
+JWT_SECRET = "secret"
+
+# [[kv_namespaces]]
+# binding = "MY_KV_NAMESPACE"
+# id = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+
+# [[r2_buckets]]
+# binding = "MY_BUCKET"
+# bucket_name = "my-bucket"
+
+# [[d1_databases]]
+# binding = "DB"
+# database_name = "my-database"
+# database_id = ""
+
+# [ai]
+# binding = "AI"
+
+# [observability]
+# enabled = true
+# head_sampling_rate = 1
