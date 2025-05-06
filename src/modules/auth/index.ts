@@ -11,7 +11,6 @@ import {
 
 import { sign } from "hono/jwt";
 
-import Bun from "bun";
 import { hashPassword, verifyPassword } from "../../utils/passwords";
 
 export const authApp = new Hono<{ Bindings: Bindings }>();
@@ -22,9 +21,10 @@ authApp.post("/register", zCreateUserValidator, async (ctx) => {
 	const supabase = getSupabase(ctx);
 
 	const body = await ctx.req.parseBody<zCreateUserInterface>();
+
 	body.password = await hashPassword(body.password);
 
-	const data = await registerUser(supabase, body);
+	const data = await registerUser(supabase, { ...body });
 
 	return ctx.json(data);
 });

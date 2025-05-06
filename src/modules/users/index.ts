@@ -2,7 +2,7 @@ import { Hono } from "hono";
 import { zUserValidator } from "./validator";
 import { getSupabase, supabaseMiddleware } from "../../middleware/supabase";
 
-const usersApp = new Hono();
+export const usersApp = new Hono();
 
 usersApp.use(supabaseMiddleware);
 
@@ -22,4 +22,3 @@ usersApp.post("/", zUserValidator, async (ctx) => {
 	return ctx.json({ data, error });
 });
 
-export { usersApp };

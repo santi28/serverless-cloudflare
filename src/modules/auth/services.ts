@@ -1,7 +1,7 @@
 import type { SupabaseClient } from "@supabase/supabase-js";
 
 export interface User {
-	name: string;
+	username: string;
 	email: string;
 	password: string;
 }
